@@ -1,0 +1,20 @@
+ion-content {
+  --background: url('/assets/images/search.jpg') no-repeat center center fixed;
+}
+
+ion-header, ion-item, ion-list, ion-button, ion-thumbnail, ion-label {
+  --background: transparent;
+}
+
+.item.item-trns {
+	border-color: rgba(0, 0, 0, 0);
+	background-color: rgba(0, 0, 0, 0);
+	color: white;
+  border: none;
+}
+.search.item-trns {
+
+	color: rgb(255, 255, 255);
+  --background: transparent;
+  font-weight: bold;
+}

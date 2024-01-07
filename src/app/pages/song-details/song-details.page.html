@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab1"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ song.title }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-img [src]="song.imagePath" alt="Pochette de l'album"></ion-img>
+    <ion-card-header>
+      <ion-card-title>{{ song.title }}</ion-card-title>
+      <ion-card-subtitle>{{ song.artistName }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{ song.releaseDate }}</p>
+      <p>{{ song.price | currency: 'FCFA' }}</p>
+    </ion-card-content>
+
+    <ion-footer>
+      <ion-button color="success" *ngIf="!song.isPurchased" (click)="buySong()">
+        Acheter cette chanson
+      </ion-button>
+    </ion-footer>
+  </ion-card>
+</ion-content>

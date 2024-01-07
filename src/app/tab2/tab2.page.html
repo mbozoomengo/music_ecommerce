@@ -1,0 +1,22 @@
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Songs</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-searchbar  class="search item-trns text-center" (ionChange)="searchSongs($event.detail.value)"></ion-searchbar>
+
+  <ion-list  class="item item-trns text-center" >
+    <ion-item *ngFor="let song of filteredSongs" (click)="viewDetails(song)">
+      <ion-thumbnail slot="start">
+        <img [src]="song.imagePath" alt="Pochette de l'album" />
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ song.title }}</h2>
+        <p>{{ song.artistName }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

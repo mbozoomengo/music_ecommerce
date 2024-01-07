@@ -1,0 +1,51 @@
+[
+  {
+    "title": "Couleur mauve",
+    "artistName": "Sake Dina",
+    "releaseDate": "2023-03-01",
+    "imagePath": "assets/images/wassa.jpg",
+    "price": 1000
+  },
+  {
+    "title": "Bek",
+    "artistName": "Sake Dina",
+    "releaseDate": "2022-10-12",
+    "imagePath": "assets/images/wassa.jpg",
+    "price": 1200
+  },
+  {
+    "title": "Wise",
+    "artistName": "Sake Dina",
+    "releaseDate": "2022-12-31",
+    "imagePath": "assets/images/wassa.jpg",
+    "price": 800
+  },
+  {
+    "title": "Bozaman",
+    "artistName": "Sake Dina",
+    "releaseDate": "2022-12-31",
+    "imagePath": "assets/images/wassa.jpg",
+    "price": 1500
+  },
+  {
+    "title": "Inside",
+    "artistName": "Sake Dina",
+    "releaseDate": "2022-10-31",
+    "imagePath": "assets/images/wassa.jpg",
+    "price": 900
+  },
+  {
+    "title": "3e Oeil",
+    "artistName": "Sake Dina",
+    "releaseDate": "2023-01-01",
+    "imagePath": "assets/images/wassa.jpg",
+    "price": 1000
+  },
+  {
+    "title": "Wise",
+    "artistName": "Sake Dina",
+    "releaseDate": "2023-02-15",
+    "imagePath": "assets/images/wassa.jpg",
+    "price": 1200
+  }
+]

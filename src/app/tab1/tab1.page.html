@@ -1,0 +1,58 @@
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Songs</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list>
+    <div *ngFor="let song of songs; let i = index">
+      <ion-row *ngIf="i % 2 === 0">
+        <ion-col size="6">
+          <ion-card  (click)="viewDetails(songs[i].id)" *ngIf="songs[i]?.title && songs[i + 1]?.title">
+            <ion-img [src]="songs[i].imagePath" alt="Pochette de l'album"></ion-img>
+            <ion-card-header class="custom-card-header">
+              <ion-card-title>{{ songs[i].title }}</ion-card-title>
+              <ion-card-subtitle>{{ songs[i].artistName }}</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content>
+              <p>{{ songs[i].releaseDate }}</p>
+              <p>{{ songs[i].price | currency: 'FCFA' }}</p>
+            </ion-card-content>
+            <ion-footer>
+              <ion-button color="warning" (click)="playSong(songs[i])">
+                <ion-icon  name="play"></ion-icon>
+              </ion-button>
+              <ion-button color="warning">
+                <ion-icon name="cart" [class.grayed-out]="songs[i].isPurchased"></ion-icon>
+              </ion-button>
+            </ion-footer>
+          </ion-card>
+        </ion-col>
+
+        <ion-col size="6" *ngIf="songs[i + 1]?.title">
+          <ion-card  (click)="viewDetails(songs[i])" *ngIf="songs[i]?.title && songs[i + 1]?.title">
+            <ion-img [src]="songs[i + 1].imagePath" alt="Pochette de l'album"></ion-img>
+            <ion-card-header>
+              <ion-card-title>{{ songs[i + 1].title }}</ion-card-title>
+              <ion-card-subtitle>{{ songs[i + 1].artistName }}</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content>
+              <p>{{ songs[i + 1].releaseDate }}</p>
+              <p>{{ songs[i + 1].price | currency: 'FCFA' }}</p>
+            </ion-card-content>
+            <ion-footer>
+              <ion-button color="warning" (click)="playSong(songs[i + 1])">
+                <ion-icon name="play"></ion-icon>
+              </ion-button>
+
+              <ion-button color="warning" >
+                <ion-icon name="cart"></ion-icon>
+              </ion-button>
+            </ion-footer>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-list>
+</ion-content>

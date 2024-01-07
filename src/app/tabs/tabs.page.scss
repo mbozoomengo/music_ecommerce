@@ -1,0 +1,30 @@
+ion-header {
+  ion-toolbar {
+    --background: transparent;
+    --ion-color-base: transparent !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ion-img {
+      height: 60px;
+      width: auto;
+      margin: 0 auto;
+      padding:0 auto;
+    }
+  }
+}
+
+ion-tab-bar {
+  --background: transparent;
+  --ion-color-base: transparent !important;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  --color: #b9b9b9;
+  border-top: none;
+
+  ion-tab-button {
+    --background: transparent;
+  }
+}
